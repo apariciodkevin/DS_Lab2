@@ -1,0 +1,5 @@
+public class aparicioLab2 {
+    public static void main(String[] args) {
+
+    }
+}
