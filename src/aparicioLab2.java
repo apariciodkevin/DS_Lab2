@@ -11,8 +11,12 @@ public class aparicioLab2 {
         // Use user input to create the rows and columns of the 2d array
         int size = sc.nextInt();
 
-        // initialize 2d array
+
+        // Print 2d array
         int[][] magicSquare = new int [size] [size];
+        // index pointers
+        int rowPlacement;
+        int columnPlacement;
 
         for(int i = 0; i < size; i++){
             for(int j = 0; j < size; j++){
