@@ -15,12 +15,17 @@ public class aparicioLab2 {
         // Print 2d array
         int[][] magicSquare = new int [size] [size];
         // index pointers
-        int rowPlacement;
-        int columnPlacement;
+        int num1 = 1;
+        int rowPlacement = 0;
+        // Dividing by two makes sure its in the middle considering its integer division.
+        int columnPlacement = size / 2;
+        // Places the number 1 in the middle column at the top row.
+        magicSquare[rowPlacement][columnPlacement] = num1;
 
         for(int i = 0; i < size; i++){
             for(int j = 0; j < size; j++){
                 System.out.print(magicSquare[i][j] + " ");
+
             }
             System.out.println();
         }
