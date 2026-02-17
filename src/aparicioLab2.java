@@ -25,6 +25,7 @@ public class aparicioLab2 {
         for(int i = 0; i < size; i++){
             for(int j = 0; j < size; j++){
                 System.out.print(magicSquare[i][j] + " ");
+                // insert new logic to fix number placement.
 
             }
             System.out.println();
