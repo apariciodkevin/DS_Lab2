@@ -22,15 +22,33 @@ public class aparicioLab2 {
         int col = size / 2; // integer division will place index in the middle of the table.
         int num = 1; // starting value for the magic square table.
 
-        for (int i = 0; i < size * size; i++){
+        for (int i = 0; i < size * size; i++){ // Runs the loop enought times to fill in each square in the arrray.
             magicSquare[row][col] = num; // place the number
             num += 1; // adds 1 to num for every iteration.
+
+            int tempRow = row - 1;
+            int tempCol = col -1;
+
+            if (tempRow < 0){
+                row = tempRow + size;
+            } else {
+                row = tempRow;
+            }
+            if (tempCol < 0){
+                col = tempCol + size;
+            } else {
+                col = tempCol;
+            }
+            if (magicSquare[row][col] > 0){
+                row = tempRow + 1;
+            }
+
         }
 
         for (int j = 0; j < size; j++){// Displays 2d array.
             System.out.println();
             for (int k = 0; k < size; k++){
-                System.out.print(magicSquare[j][k]);
+                System.out.print(magicSquare[j][k] + "\t");
             }
         }
 
