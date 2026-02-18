@@ -11,20 +11,29 @@ public class aparicioLab2 {
         int size = sc.nextInt();
 
         // Checks to make sure user input is valid.
-        while (size % 2 == 0){
+        while (size % 2 == 0) {
             System.out.println("Please enter ODD NUMBER ONLY");
             size = sc.nextInt();
         }
 
-        int [][] magicSquare = new int[size][size]; // initialize 2d array
+        int[][] magicSquare = new int[size][size]; // initialize 2d array
 
+        int row = 0;
+        int col = size / 2; // integer division will place index in the middle of the table.
+        int num = 1; // starting value for the magic square table.
 
+        for (int i = 0; i < size * size; i++){
+            magicSquare[row][col] = num; // place the number
+            num += 1; // adds 1 to num for every iteration.
+        }
 
-        for (int i = 0; i < size; i++){ // Displays contents of 2d array
+        for (int j = 0; j < size; j++){// Displays 2d array.
             System.out.println();
-            for (int j = 0; j < size; j++){
-                System.out.print(magicSquare[i][j]);
+            for (int k = 0; k < size; k++){
+                System.out.print(magicSquare[j][k]);
             }
         }
+
+
     }
 }
