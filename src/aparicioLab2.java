@@ -29,20 +29,20 @@ public class aparicioLab2 {
             int tempRow = row - 1;
             int tempCol = col -1;
 
-            if (tempRow < 0){
-                row = tempRow + size;
+            if (tempRow < 0){ // if row is outside of array
+                row = tempRow + size; // row to the bottom of the table
             } else {
-                row = tempRow;
+                row = tempRow; // if not leave it as is.
             }
-            if (tempCol < 0){
-                col = tempCol + size;
+            if (tempCol < 0){ // if column is outside of array
+                col = tempCol + size; // moves it across the table.
             } else {
                 col = tempCol;
             }
-            if (magicSquare[row][col] > 0){
-                row = tempRow + 1;
+            if (magicSquare[row][col] > 0) { // Checks to see if spot is filled.
+                row = tempRow + 2;// moves down 2
+                col = tempCol + 1; // moves to the right once.
             }
-
         }
 
         for (int j = 0; j < size; j++){// Displays 2d array.
