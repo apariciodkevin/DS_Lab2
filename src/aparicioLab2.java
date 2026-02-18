@@ -51,7 +51,5 @@ public class aparicioLab2 {
                 System.out.print(magicSquare[j][k] + "\t");
             }
         }
-
-
     }
 }
