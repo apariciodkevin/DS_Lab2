@@ -29,31 +29,32 @@ public class aparicioLab2 {
         // First loop
         for (int i = 0; i < size * size; i++){
             magicSquare [row] [col] = num;
-            System.out.print(magicSquare[row][col]);
+            System.out.println(magicSquare[row][col]);
             // adds 1 to num for each iteration.
             num += 1;
 
             // first step to move up one spot
             row = row - 1;
-            // second step to move to the left one spot.
-            col = col - 1;
             // Checks to make sure the place for the next num is inside the square
             // if it is not then it moves the number to the bottom.
             if (row < 0){
                 row = row + size;
             }
+
+            // second step to move to the left one spot.
+            col = col - 1;
             // Same thing as row. Checks to make sure col is inbound.2
             if (col < 0){
                 col = col + size;
             }
 
-
-
-
+            // Checks to see if the spot in the array is already filled.
+            if (magicSquare[row][col] > 0){
+                row = row + 1;
+            }
+            for (int j = 0; j < size; j++){
+                System.out.println(num);
+            }
         }
-
-
-
-
     }
 }
